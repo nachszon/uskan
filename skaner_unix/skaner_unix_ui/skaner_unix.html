@@ -1,0 +1,101 @@
+﻿<!--
+skaner_unix.html
+strona prezentująca formularz skanowania sieci
+marzec 2017
+Nachszon
+
+opis zmiennych w formularzy diagform:
+string_source_host - host źródłowy
+string_destination_host - host docelowy
+string_port - port hosta string_destination_host
+
+sprawdzanie ruchu sieciowego odbywa się według schematu:
+
+string_source_host -> string_destination_host:string_port
+
+//-->
+
+<html>
+  <head>
+  <META charset="utf-8">
+	<META content="text/html; charset=utf-8" http-equiv=content-type>
+	<META name=GENERATOR content="MSHTML 8.00.7601.18448">
+  
+    
+    <title>Diagnostyka grup a i b</title>
+
+    
+	
+	
+	
+	<script type="text/javascript">
+    
+	function selecturl(s) {
+	var gourl = s.options[s.selectedIndex].value;	window.top.location.href = gourl;
+}
+    
+</script>
+
+ 
+
+
+
+  </head>
+  
+<body>
+
+
+
+<div align="center">
+Diagnostyka ruchu sieciowego
+<br \>
+Grupy a i b
+<br \>
+<br \>
+<br \>
+<br \>
+</div>
+<div align="center">
+
+
+<form name="diagform" action="http://$path/skaner.pl" method="POST">
+<select name="string_source_host">
+<option value="hosts_group_a">pełny raport grupy a</option>
+<option value="a1">a1</option>
+<option value="a2">a2</option>
+<option value="a3">a3</option>
+<option value="a4">a4</option>
+<option value="hosts_group_b">pełny raport grupy b</option>
+<option value="b1">b1</option>
+<option value="b2">b2</option>
+<option value="b3">b3</option>
+<option value="b4">b4</option>
+</select>
+
+--><INPUT TYPE="TEXT" NAME="string_destination_host" VALUE="host docelowy" onclick="this.value=''" style="width: 100px">:
+<INPUT TYPE="TEXT" NAME="string_port" VALUE="port docelowy" onclick="this.value=''" style="width: 100px">
+<input type="submit" value="sprawdź ruch sieciowy" style="width: 200px">
+
+
+</form>
+
+
+</div>
+<br />
+<br />
+<br />
+<div align="center">
+
+<br \>
+<br \>
+<br \>
+<a href=index.html>Strona główna</a>
+<br \>
+<br \>
+<a href=diagwas8.html>Diagnostyka Grup a i b</a>
+
+
+
+
+</body>
+</html>
